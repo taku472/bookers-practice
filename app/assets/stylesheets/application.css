@@ -47,3 +47,11 @@ a:hover {
 div {
   margin-bottom: 10px;
 }
+
+.text-danger {
+  color: red;
+}
+
+.text-success {
+  color: green;
+}

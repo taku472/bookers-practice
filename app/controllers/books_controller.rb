@@ -8,9 +8,9 @@ class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
     if book.save
-      redirect_to books_path, notice: 'Book was successfully created.'
+      redirect_to book_path(book.id), notice: 'Book was successfully created.'
     else
-      flash.now[:alret] = '投稿に失敗しました'
+      flash.now[:alret] = 'book was not created.'
       @books = Book.all
       render "index"
     end
